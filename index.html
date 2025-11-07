@@ -61,25 +61,6 @@
 		display: none;
 	}
 </style>
-<script>
-	function languageSelect(language)
-	{
-		if (language == "us")
-		{
-			elemsLang = document.getElementsByClassName("lang");
-			for (i = 0; i < elemsLang.length; i += 1) { elemsLang[i].style.display = 'none'; }
-			elemsDisplay = document.getElementsByClassName("us");
-			for (i = 0; i < elemsDisplay.length; i += 1) { elemsDisplay[i].style.display = 'block'; }
-		}
-		else if (language == "fr")
-		{
-			elemsLang = document.getElementsByClassName("lang");
-			for (i = 0; i < elemsLang.length; i += 1) { elemsLang[i].style.display = 'none'; }
-			elemsDisplay = document.getElementsByClassName("fr");
-			for (i = 0; i < elemsDisplay.length; i += 1) { elemsDisplay[i].style.display = 'block'; }
-		}
-	}
-</script>
 
 <html>
 <body class="flexVertical colBg" style="padding:0px; margin:0px">
@@ -97,8 +78,8 @@
 
 	<!-- Language section -->
 	<div class="grow5 flexVertical">
-		<div class="lang us" style="font-family:Arial, Helvetica, sans-serif; font-size:3vmax; color:white;">Language:</div>
-		<div class="lang fr" style="font-family:Arial, Helvetica, sans-serif; font-size:3vmax; color:white;">Langue:</div>
+		<div class="lang us" style="font-family:Arial, Helvetica, sans-serif; font-size:100%; color:white;">Language:</div>
+		<div class="lang fr" style="font-family:Arial, Helvetica, sans-serif; font-size:100%; color:white;">Langue:</div>
 		
 		<div class="grow1 flexHorizontal" style="justify-content:center; gap:5%; width:100%;">
 			<svg class="scriptFlagFr" onclick="languageSelect('fr')" width="4vmax" height="5vmax" viewBox="0 0 36 36">
@@ -123,3 +104,30 @@
 
 </body>
 </html>
+
+<script>
+	function languageSelect(language)
+	{
+		if (language == "us")
+		{
+			elemsLang = document.getElementsByClassName("lang");
+			for (i = 0; i < elemsLang.length; i += 1) { elemsLang[i].style.display = 'none'; }
+			elemsDisplay = document.getElementsByClassName("us");
+			for (i = 0; i < elemsDisplay.length; i += 1) { elemsDisplay[i].style.display = 'block'; }
+		}
+		else if (language == "fr")
+		{
+			elemsLang = document.getElementsByClassName("lang");
+			for (i = 0; i < elemsLang.length; i += 1) { elemsLang[i].style.display = 'none'; }
+			elemsDisplay = document.getElementsByClassName("fr");
+			for (i = 0; i < elemsDisplay.length; i += 1) { elemsDisplay[i].style.display = 'block'; }
+		}
+	}
+	function init()
+	{
+		const detectedLang = Intl.DateTimeFormat().resolvedOptions().locale;
+		if (detectedLang.includes("fr")) { languageSelect("fr"); }
+		else                             { languageSelect("us"); }
+	}
+	init();
+</script>
