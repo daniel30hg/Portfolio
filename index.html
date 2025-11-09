@@ -3,7 +3,6 @@
 <style>
 	*
 	{
-		text-align: center;
 		padding: 0px;
 		margin: 0px;
 	}
@@ -11,17 +10,27 @@
 	{
 		display: flex;
 		flex-direction: column;
+		justify-content: start;
+	}
+	.flexVerticalCenter
+	{
+		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		flex-wrap: wrap;
 	}
 	.flexHorizontal
 	{
 		display: flex;
 		flex-direction: row;
+		justify-content: start;
+	}
+	.flexHorizontalCenter
+	{
+		display: flex;
+		flex-direction: row;
 		justify-content: center;
 		align-items: center;
-		flex-wrap: wrap;
 	}
 	.colBg
 	{
@@ -34,6 +43,10 @@
 	.colSub
 	{
 		background-color: #004701;
+	}
+	.grow
+	{
+		flex-grow: 1;
 	}
 	.grow1
 	{
@@ -69,34 +82,77 @@
 <div style="height:5vmax;"></div>
 
 <div class="flexHorizontal" style="width:100vw;">
-	<div class="grow1 flexHorizontal colSub">
+	<div class="colbg" style="width:5vw"></div>
+
+	<div class="flexVertical" style="width:90vw">
+		<!-- Name & Language section -->
+		<div class="grow1 flexHorizontal">
+			<div class="flexVerticalCenter colMain grow" style="font-family:Arial, Helvetica, sans-serif; font-size:6vmax; color:white; align-items:start;">
+				Daniel
+			</div>
 		
-	</div>
-	<div class="grow5 flexVertical colMain" style="font-family:Arial, Helvetica, sans-serif; font-size:6vmax; color:white; align-items:start;">
-		Daniel
+			<div class="flexVertical colSub">
+				<div class="grow" style="font-family:Arial, Helvetica, sans-serif; font-size:3vmax; color:white;">
+					<span class="lang us">Language:</span>
+					<span class="lang fr">Langue:</span>
+				</div>
+				
+				<div class="flexHorizontal" style="justify-content:center; width:100%;">
+					<svg class="scriptFlagUs" onclick="languageSelect('us')" width="5vmax" height="5vmax" viewBox="0 0 36 36">
+						<path fill="#B22334" d="M35.445 7C34.752 5.809 33.477 5 32 5H18v2h17.445zM0 25h36v2H0zm18-8h18v2H18zm0-4h18v2H18zM0 21h36v2H0zm4 10h28c1.477 0 2.752-.809 3.445-2H.555c.693 1.191 1.968 2 3.445 2zM18 9h18v2H18z" />
+						<path fill="#EEE" d="M.068 27.679c.017.093.036.186.059.277c.026.101.058.198.092.296c.089.259.197.509.333.743L.555 29h34.89l.002-.004a4.22 4.22 0 0 0 .332-.741a3.75 3.75 0 0 0 .152-.576c.041-.22.069-.446.069-.679H0c0 .233.028.458.068.679zM0 23h36v2H0zm0-4v2h36v-2H18zm18-4h18v2H18zm0-4h18v2H18zM0 9zm.555-2l-.003.005L.555 7zM.128 8.044c.025-.102.06-.199.092-.297a3.78 3.78 0 0 0-.092.297zM18 9h18c0-.233-.028-.459-.069-.68a3.606 3.606 0 0 0-.153-.576A4.21 4.21 0 0 0 35.445 7H18v2z" />
+						<path fill="#3C3B6E" d="M18 5H4a4 4 0 0 0-4 4v10h18V5z" />
+						<path fill="#FFF" d="M2.001 7.726l.618.449l-.236.725L3 8.452l.618.448l-.236-.725L4 7.726h-.764L3 7l-.235.726zm2 2l.618.449l-.236.725l.617-.448l.618.448l-.236-.725L6 9.726h-.764L5 9l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L9 9l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L13 9l-.235.726zm-8 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L5 13l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L9 13l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L13 13l-.235.726zm-6-6l.618.449l-.236.725L7 8.452l.618.448l-.236-.725L8 7.726h-.764L7 7l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 7l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 7l-.235.726zm-12 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L3 11l-.235.726zM6.383 12.9L7 12.452l.618.448l-.236-.725l.618-.449h-.764L7 11l-.235.726h-.764l.618.449zm3.618-1.174l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 11l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 11l-.235.726zm-12 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L3 15l-.235.726zM6.383 16.9L7 16.452l.618.448l-.236-.725l.618-.449h-.764L7 15l-.235.726h-.764l.618.449zm3.618-1.174l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 15l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 15l-.235.726z" />
+					</svg>
+					<div style="width:1vmax;"></div>
+					<svg class="scriptFlagFr" onclick="languageSelect('fr')" width="5vmax" height="5vmax" viewBox="0 0 36 36">
+						<path fill="#ED2939" d="M36 27a4 4 0 0 1-4 4h-8V5h8a4 4 0 0 1 4 4v18z" />
+						<path fill="#002495" d="M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5H4z" />
+						<path fill="#EEE" d="M12 5h12v26H12z" />
+					</svg>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Empty spacing -->
+		<div class="grow1 flexHorizontal" style="height:10vmax;">
+		</div>
+		
+		<!-- Project -->
+		<div class="grow1 flexHorizontal">
+			<div class="flexVerticalCenter">
+				<iframe src="https://www.youtube-nocookie.com/embed/nkJfJjksbng" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+			</div>
+			<div style="width:5vmax;"></div>
+			<div class="flexVertical">
+				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
+					<span class="lang us">Connect 4 robot:</span>
+					<span class="lang fr">Robot puissance 4:</span>
+				</div>
+				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
+					<span class="lang us">
+						- User interface (from scratch, using <a href="https://www.sfml-dev.org/">SFML</a> library)<br/>
+						- Computer vision (using <a href="https://opencv.org/">OpenCV</a> and custom algorithms)<br/>
+						- Artificial intelligence algorithm (<a href="https://en.wikipedia.org/wiki/Negamax">negamax</a>, with optimizations)<br/>
+						- Robot arm control<br/>
+						<span style="font-size: 0.8vmax;">Main technology: C++</span>
+					</span>
+					<span class="lang fr">
+						- Interface utilisateur (implémentation sur-mesure, avec la librairie <a href="https://www.sfml-dev.org/">SFML</a>)<br/>
+						- Vision par ordinateur (avec la librairie <a href="https://opencv.org/">OpenCV</a> et des algorithmes sur-mesure)<br/>
+						- Intelligence artificielle (algorithme <a href="https://en.wikipedia.org/wiki/Negamax">negamax</a>, avec optimizations)<br/>
+						- Control du bras robotique<br/>
+						<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
+					</span>
+				</div>
+			</div>
+		</div>
+
+
+
 	</div>
 
-	<!-- Language section -->
-	<div class="grow5 flexVertical">
-		<div class="lang us" style="font-family:Arial, Helvetica, sans-serif; font-size:100%; color:white;">Language:</div>
-		<div class="lang fr" style="font-family:Arial, Helvetica, sans-serif; font-size:100%; color:white;">Langue:</div>
-		
-		<div class="grow1 flexHorizontal" style="justify-content:center; gap:5%; width:100%;">
-			<svg class="scriptFlagFr" onclick="languageSelect('fr')" width="4vmax" height="5vmax" viewBox="0 0 36 36">
-				<path fill="#ED2939" d="M36 27a4 4 0 0 1-4 4h-8V5h8a4 4 0 0 1 4 4v18z" />
-				<path fill="#002495" d="M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5H4z" />
-				<path fill="#EEE" d="M12 5h12v26H12z" />
-			</svg>
-			<svg class="scriptFlagUs" onclick="languageSelect('us')" width="4vmax" height="5vmax" viewBox="0 0 36 36">
-				<path fill="#B22334" d="M35.445 7C34.752 5.809 33.477 5 32 5H18v2h17.445zM0 25h36v2H0zm18-8h18v2H18zm0-4h18v2H18zM0 21h36v2H0zm4 10h28c1.477 0 2.752-.809 3.445-2H.555c.693 1.191 1.968 2 3.445 2zM18 9h18v2H18z" />
-				<path fill="#EEE" d="M.068 27.679c.017.093.036.186.059.277c.026.101.058.198.092.296c.089.259.197.509.333.743L.555 29h34.89l.002-.004a4.22 4.22 0 0 0 .332-.741a3.75 3.75 0 0 0 .152-.576c.041-.22.069-.446.069-.679H0c0 .233.028.458.068.679zM0 23h36v2H0zm0-4v2h36v-2H18zm18-4h18v2H18zm0-4h18v2H18zM0 9zm.555-2l-.003.005L.555 7zM.128 8.044c.025-.102.06-.199.092-.297a3.78 3.78 0 0 0-.092.297zM18 9h18c0-.233-.028-.459-.069-.68a3.606 3.606 0 0 0-.153-.576A4.21 4.21 0 0 0 35.445 7H18v2z" />
-				<path fill="#3C3B6E" d="M18 5H4a4 4 0 0 0-4 4v10h18V5z" />
-				<path fill="#FFF" d="M2.001 7.726l.618.449l-.236.725L3 8.452l.618.448l-.236-.725L4 7.726h-.764L3 7l-.235.726zm2 2l.618.449l-.236.725l.617-.448l.618.448l-.236-.725L6 9.726h-.764L5 9l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L9 9l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L13 9l-.235.726zm-8 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L5 13l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L9 13l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L13 13l-.235.726zm-6-6l.618.449l-.236.725L7 8.452l.618.448l-.236-.725L8 7.726h-.764L7 7l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 7l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 7l-.235.726zm-12 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L3 11l-.235.726zM6.383 12.9L7 12.452l.618.448l-.236-.725l.618-.449h-.764L7 11l-.235.726h-.764l.618.449zm3.618-1.174l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 11l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 11l-.235.726zm-12 4l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L3 15l-.235.726zM6.383 16.9L7 16.452l.618.448l-.236-.725l.618-.449h-.764L7 15l-.235.726h-.764l.618.449zm3.618-1.174l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L11 15l-.235.726zm4 0l.618.449l-.236.725l.617-.448l.618.448l-.236-.725l.618-.449h-.764L15 15l-.235.726z" />
-			</svg>
-		</div>
-	</div>
-	<div class="grow1 flexHorizontal colSub" style="justify-content: space-around;">
-	</div>
+	<div class="colbg" style="width:5vw"></div>
 
 	
 	
