@@ -34,7 +34,7 @@
 	}
 	.colBg
 	{
-		background-color: #111111;
+		background-color: #101820;
 	}
 	.colMain
 	{
@@ -42,7 +42,7 @@
 	}
 	.colSub
 	{
-		background-color: #004701;
+		background-color: #202830;
 	}
 	.grow
 	{
@@ -86,18 +86,21 @@
 
 	<div class="flexVertical" style="width:90vw">
 		<!-- Name & Language section -->
+		<div class="grow1 colSub" style="height:1vmax;"></div>
 		<div class="grow1 flexHorizontal">
-			<div class="flexVerticalCenter colMain grow" style="font-family:Arial, Helvetica, sans-serif; font-size:6vmax; color:white; align-items:start;">
+			<div class="colSub" style="width:10vw"></div>
+			<div class="flexVerticalCenter grow colSub" style="font-family:Arial, Helvetica, sans-serif; font-size:6vmax; color:white; align-items:start;">
 				Daniel
 			</div>
 		
-			<div class="flexVertical colSub">
+			<div class="flexVerticalCenter colSub">
 				<div class="grow" style="font-family:Arial, Helvetica, sans-serif; font-size:3vmax; color:white;">
 					<span class="lang us">Language:</span>
 					<span class="lang fr">Langue:</span>
 				</div>
 				
 				<div class="flexHorizontal" style="justify-content:center; width:100%;">
+					<div class="colSub" style="width:5vw"></div>
 					<svg class="scriptFlagUs" onclick="languageSelect('us')" width="5vmax" height="5vmax" viewBox="0 0 36 36">
 						<path fill="#B22334" d="M35.445 7C34.752 5.809 33.477 5 32 5H18v2h17.445zM0 25h36v2H0zm18-8h18v2H18zm0-4h18v2H18zM0 21h36v2H0zm4 10h28c1.477 0 2.752-.809 3.445-2H.555c.693 1.191 1.968 2 3.445 2zM18 9h18v2H18z" />
 						<path fill="#EEE" d="M.068 27.679c.017.093.036.186.059.277c.026.101.058.198.092.296c.089.259.197.509.333.743L.555 29h34.89l.002-.004a4.22 4.22 0 0 0 .332-.741a3.75 3.75 0 0 0 .152-.576c.041-.22.069-.446.069-.679H0c0 .233.028.458.068.679zM0 23h36v2H0zm0-4v2h36v-2H18zm18-4h18v2H18zm0-4h18v2H18zM0 9zm.555-2l-.003.005L.555 7zM.128 8.044c.025-.102.06-.199.092-.297a3.78 3.78 0 0 0-.092.297zM18 9h18c0-.233-.028-.459-.069-.68a3.606 3.606 0 0 0-.153-.576A4.21 4.21 0 0 0 35.445 7H18v2z" />
@@ -110,9 +113,12 @@
 						<path fill="#002495" d="M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5H4z" />
 						<path fill="#EEE" d="M12 5h12v26H12z" />
 					</svg>
+					<div class="colSub" style="width:5vw"></div>
 				</div>
 			</div>
+			<div class="colSub" style="width:10vw"></div>
 		</div>
+		<div class="grow1 colSub" style="height:1vmax;"></div>
 		
 		<!-- Vertical divider (long) -->
 		<div class="grow1 flexHorizontal" style="height:10vmax;">
@@ -134,14 +140,14 @@
 						- User interface (from scratch, using <a href="https://www.sfml-dev.org/">SFML</a> library)<br/>
 						- Computer vision (using <a href="https://opencv.org/">OpenCV</a> and custom algorithms)<br/>
 						- Artificial intelligence algorithm (<a href="https://en.wikipedia.org/wiki/Negamax">negamax</a>, with optimizations)<br/>
-						- Robot arm control<br/>
+						- Arm positioning control<br/>
 						<span style="font-size: 0.8vmax;">Main technology: C++</span>
 					</span>
 					<span class="lang fr">
 						- Interface utilisateur (implémentation sur-mesure, avec la librairie <a href="https://www.sfml-dev.org/">SFML</a>)<br/>
 						- Vision par ordinateur (avec la librairie <a href="https://opencv.org/">OpenCV</a> et des algorithmes sur-mesure)<br/>
 						- Intelligence artificielle (algorithme <a href="https://en.wikipedia.org/wiki/Negamax">negamax</a>, avec optimizations)<br/>
-						- Control du bras robotique<br/>
+						- Controle de la position du bras<br/>
 						<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
 					</span>
 				</div>
@@ -160,23 +166,23 @@
 			<div style="width:5vmax;"></div>
 			<div class="flexVertical">
 				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
-					<span class="lang us">Other:</span>
-					<span class="lang fr">Autre:</span>
+					<span class="lang us">2D platformer game:</span>
+					<span class="lang fr">Jeu de plateforme 2D:</span>
 				</div>
 				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
 					<span class="lang us">
-						- A<br/>
-						- B<br/>
-						- C<br/>
-						- D<br/>
-						<span style="font-size: 0.8vmax;">Main technology: :O?</span>
+						- Collision detection<br/>
+						- Shadows & shaders<br/>
+						- Entity management<br/>
+						- Level editor<br/>
+						<span style="font-size: 0.8vmax;">Main technology: C++</span>
 					</span>
 					<span class="lang fr">
-						- A<br/>
-						- B<br/>
-						- C<br/>
-						- D<br/>
-						<span style="font-size: 0.8vmax;">Technologie primaire: :O?</span>
+						- Détection de collisions<br/>
+						- Ombres et shaders<br/>
+						- Gestion des entitées<br/>
+						- Éditeur de niveaux<br/>
+						<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
 					</span>
 				</div>
 			</div>
@@ -194,23 +200,133 @@
 			<div style="width:5vmax;"></div>
 			<div class="flexVertical">
 				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
-					<span class="lang us">Other:</span>
-					<span class="lang fr">Autre:</span>
+					<span class="lang us">2D physics engine:</span>
+					<span class="lang fr">Moteur physique 2D:</span>
 				</div>
 				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
 					<span class="lang us">
-						- A<br/>
-						- B<br/>
-						- C<br/>
-						- D<br/>
-						<span style="font-size: 0.8vmax;">Main technology: :O?</span>
+						- Broad phase optimization<br/>
+						- Support for custom geometry<br/>
+						- Moment of inertia computation<br/>
+						- Handling of friction and restitution<br/>
+						<span style="font-size: 0.8vmax;">Main technology: C++</span>
 					</span>
 					<span class="lang fr">
-						- A<br/>
-						- B<br/>
-						- C<br/>
-						- D<br/>
-						<span style="font-size: 0.8vmax;">Technologie primaire: :O?</span>
+						- Optimisation avec phase large<br/>
+						- Géometrie arbitraire possible<br/>
+						- Calcul du moment d'inertie<br/>
+						- Gestion des coefficients de friction et restitution<br/>
+						<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Vertical divider -->
+		<div class="grow1 flexHorizontal" style="height:6vmax;">
+		</div>
+		
+		<!-- Project -->
+		<div class="grow1 flexHorizontal">
+			<div class="flexVerticalCenter">
+				
+			</div>
+			<div style="width:5vmax;"></div>
+			<div class="flexVertical">
+				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
+					<span class="lang us">Syntax parser generator:</span>
+					<span class="lang fr">Générateur de parseur de syntaxe:</span>
+				</div>
+				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
+					<span class="lang us">
+						<span style="font-size: 0.8vmax;">Main technology: C++</span>
+					</span>
+					<span class="lang fr">
+						<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Vertical divider -->
+		<div class="grow1 flexHorizontal" style="height:6vmax;">
+		</div>
+		
+		<!-- Project -->
+		<div class="grow1 flexHorizontal">
+			<div class="flexVerticalCenter">
+				
+			</div>
+			<div style="width:5vmax;"></div>
+			<div class="flexVertical">
+				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
+					<span class="lang us">Arduino air quality sensor:</span>
+					<span class="lang fr">Capteur de qualité d'air Arduino:</span>
+				</div>
+				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
+					<span class="lang us">
+						<span style="font-size: 0.8vmax;">Main technology: C++</span>
+					</span>
+					<span class="lang fr">
+						<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Vertical divider -->
+		<div class="grow1 flexHorizontal" style="height:6vmax;">
+		</div>
+		
+		<!-- Project -->
+		<div class="grow1 flexHorizontal">
+			<div class="flexVerticalCenter">
+				
+			</div>
+			<div style="width:5vmax;"></div>
+			<div class="flexVertical">
+				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
+					<span class="lang us">2D image positioning algorithm:</span>
+					<span class="lang fr">Algorithme de positionement d'images 2D:</span>
+				</div>
+				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
+					<span class="lang us">
+						<span style="font-size: 0.8vmax;">Main technology: C++</span>
+					</span>
+					<span class="lang fr">
+						<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
+					</span>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Vertical divider -->
+		<div class="grow1 flexHorizontal" style="height:6vmax;">
+		</div>
+		
+		<!-- Project -->
+		<div class="grow1 flexHorizontal">
+			<div class="flexVerticalCenter">
+				
+			</div>
+			<div style="width:5vmax;"></div>
+			<div class="flexVertical">
+				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
+					<span class="lang us">This portfolio:</span>
+					<span class="lang fr">Ce portfolio:</span>
+				</div>
+				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
+					<span class="lang us">
+						- Automatically adjusts to different screen sizes<br/>
+						- Automated language detection<br/>
+						- Made in text editors, without external tools<br/>
+						<span style="font-size: 0.8vmax;">Main technology: HTML, CSS, Javascript</span>
+					</span>
+					<span class="lang fr">
+						- S'ajuste automatiquement à différentes tailles d'écrans<br/>
+						- Détection automatique de la langue<br/>
+						- Créé dans des éditeurs de texte, sans outils externe<br/>
+						<span style="font-size: 0.8vmax;">Technologie primaire: HTML, CSS, Javascript</span>
 					</span>
 				</div>
 			</div>
