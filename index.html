@@ -32,18 +32,16 @@
 		justify-content: center;
 		align-items: center;
 	}
-	.colBg
-	{
-		background-color: #101820;
-	}
-	.colMain
-	{
-		background-color: #424242;
-	}
-	.colSub
-	{
-		background-color: #202830;
-	}
+
+	.colBg { background-color: #101820; }
+	.colMain { background-color: #303840; }
+	.colSub { background-color: #202830; }
+
+	.fontXL { font-family:Arial, Helvetica, sans-serif; font-size:6vmax; color:white; }
+	.fontL { font-family:Arial, Helvetica, sans-serif; font-size:3vmax; color:white; }
+	.fontM { font-family:Arial, Helvetica, sans-serif; font-size:1.5vmax; color:white; }
+	.fontS { font-family:Arial, Helvetica, sans-serif; font-size:1vmax; color:white; }
+
 	.grow
 	{
 		flex-grow: 1;
@@ -73,6 +71,28 @@
 	{
 		display: none;
 	}
+	.collapser
+	{
+		cursor: pointer;
+		user-select: none;
+		transition: box-shadow 160ms, background-color 160ms;
+		transition-timing-function: ease-out;
+	}
+	.collapser:hover, .collapser.active { background-color: #303840; box-shadow:inset 0px 0px 0px 5px rgba(128, 128, 128, 0.75); }
+	.collapser:hover { border: lightgray; box-shadow:inset 0px 0px 0px 5px lightgray; }
+	.collapsible
+	{
+		overflow: hidden;
+		transition: max-height 160ms, padding-top 160ms, padding-bottom 160ms;
+		transition-timing-function: ease-out;
+	}
+	.collapsed
+	{
+		max-height: 0 !important;
+
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
 </style>
 
 <html>
@@ -89,12 +109,12 @@
 		<div class="grow1 colSub" style="height:1vmax;"></div>
 		<div class="grow1 flexHorizontal">
 			<div class="colSub" style="width:10vw"></div>
-			<div class="flexVerticalCenter grow colSub" style="font-family:Arial, Helvetica, sans-serif; font-size:6vmax; color:white; align-items:start;">
+			<div class="flexVerticalCenter grow colSub fontXL">
 				Daniel
 			</div>
 		
 			<div class="flexVerticalCenter colSub">
-				<div class="grow" style="font-family:Arial, Helvetica, sans-serif; font-size:3vmax; color:white;">
+				<div class="grow fontL">
 					<span class="lang us">Language:</span>
 					<span class="lang fr">Langue:</span>
 				</div>
@@ -125,32 +145,43 @@
 		</div>
 		
 		<!-- Project -->
-		<div class="grow1 flexHorizontal">
-			<div class="flexVerticalCenter">
-				<iframe src="https://www.youtube-nocookie.com/embed/nkJfJjksbng" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+		<div class="grow1 flexVertical">
+			<div class="grow1 flexHorizontal colMain" style="padding:1vmax;">
+				<div style="width:5vmax;"></div>
+				<div class="flexVertical">
+					<div class="fontL">
+						<span class="lang us">Connect 4 robot:</span>
+						<span class="lang fr">Robot puissance 4:</span>
+					</div>
+					<div class="flexHorizontal fontM">
+						<span class="lang us">
+							- User interface (from scratch, using <a href="https://www.sfml-dev.org/">SFML</a> library)<br/>
+							- Computer vision (using <a href="https://opencv.org/">OpenCV</a> and custom algorithms)<br/>
+							- Artificial intelligence algorithm (<a href="https://en.wikipedia.org/wiki/Negamax">negamax</a>, with optimizations)<br/>
+							- Arm positioning control<br/>
+							<span style="font-size: 0.8vmax;">Main technology: C++</span>
+						</span>
+						<span class="lang fr">
+							- Interface utilisateur (implémentation sur-mesure, avec la librairie <a href="https://www.sfml-dev.org/">SFML</a>)<br/>
+							- Vision par ordinateur (avec la librairie <a href="https://opencv.org/">OpenCV</a> et des algorithmes sur-mesure)<br/>
+							- Intelligence artificielle (algorithme <a href="https://en.wikipedia.org/wiki/Negamax">negamax</a>, avec optimizations)<br/>
+							- Controle de la position du bras<br/>
+							<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
+						</span>
+					</div>
+				</div>
 			</div>
-			<div style="width:5vmax;"></div>
-			<div class="flexVertical">
-				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
-					<span class="lang us">Connect 4 robot:</span>
-					<span class="lang fr">Robot puissance 4:</span>
-				</div>
-				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
-					<span class="lang us">
-						- User interface (from scratch, using <a href="https://www.sfml-dev.org/">SFML</a> library)<br/>
-						- Computer vision (using <a href="https://opencv.org/">OpenCV</a> and custom algorithms)<br/>
-						- Artificial intelligence algorithm (<a href="https://en.wikipedia.org/wiki/Negamax">negamax</a>, with optimizations)<br/>
-						- Arm positioning control<br/>
-						<span style="font-size: 0.8vmax;">Main technology: C++</span>
-					</span>
-					<span class="lang fr">
-						- Interface utilisateur (implémentation sur-mesure, avec la librairie <a href="https://www.sfml-dev.org/">SFML</a>)<br/>
-						- Vision par ordinateur (avec la librairie <a href="https://opencv.org/">OpenCV</a> et des algorithmes sur-mesure)<br/>
-						- Intelligence artificielle (algorithme <a href="https://en.wikipedia.org/wiki/Negamax">negamax</a>, avec optimizations)<br/>
-						- Controle de la position du bras<br/>
-						<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
-					</span>
-				</div>
+			
+			
+			<div class="grow1 colSub flexVerticalCenter collapser fontM" style="padding:1vmax;">
+				<span class="lang us">Details</span>
+				<span class="lang fr">Détails</span>
+				<svg width="2vmax" height="2vmax" viewBox="4 4 16 16" fill="none">
+					<path d="M7 10L12 15L17 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</div>
+			<div class="collapsible collapsed colSub flexHorizontal" style="padding:1vmax; justify-content:center;">
+				<iframe src="https://www.youtube-nocookie.com/embed/nkJfJjksbng" style="width:50vmax;height:28.125vmax;" loading="lazy" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 			</div>
 		</div>
 		
@@ -367,11 +398,24 @@
 			for (i = 0; i < elemsDisplay.length; i += 1) { elemsDisplay[i].style.display = 'block'; }
 		}
 	}
+	function toggleCollapse()
+	{
+		var content = this.nextElementSibling;
+		this.classList.toggle("active");
+		content.classList.toggle("collapsed");
+	}
+	
 	function init()
 	{
+		// Language
 		const detectedLang = Intl.DateTimeFormat().resolvedOptions().locale;
 		if (detectedLang.includes("fr")) { languageSelect("fr"); }
 		else                             { languageSelect("us"); }
+
+		// Collapsers
+		var collapsers = document.getElementsByClassName("collapser");
+
+		for (i = 0; i < collapsers.length; i += 1) { collapsers[i].nextElementSibling.style.maxHeight = collapsers[i].nextElementSibling.scrollHeight + "px"; collapsers[i].addEventListener("click", toggleCollapse); }
 	}
 	init();
 </script>
