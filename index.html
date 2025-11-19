@@ -7,32 +7,11 @@
 		margin: 0px;
 	}
 	
-	.flexVertical
-	{
-		display: flex;
-		flex-direction: column;
-		justify-content: start;
-	}
-	.flexVerticalCenter
-	{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	.flexHorizontal
-	{
-		display: flex;
-		flex-direction: row;
-		justify-content: start;
-	}
-	.flexHorizontalCenter
-	{
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		align-items: center;
-	}
+	.flexVertical { display: flex; flex-direction: column; }
+	.flexHorizontal { display: flex; flex-direction: row; }
+	.flexCenterMain { justify-content: center; }
+	.flexCenterOff { align-items: center; }
+	.flexCenter { justify-content: center; align-items: center; }
 
 	.colBg { background-color: #101820; }
 	.colMain { background-color: #303840; }
@@ -40,8 +19,8 @@
 
 	.fontXL { font-family:Arial, Helvetica, sans-serif; font-size:5vmax; color:white; }
 	.fontL { font-family:Arial, Helvetica, sans-serif; font-size:2vmax; color:white; }
-	.fontM { font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white; }
-	.fontS { font-family:Arial, Helvetica, sans-serif; font-size:0.8vmax; color:white; }
+	.fontM { font-family:Arial, Helvetica, sans-serif; font-size:1.0vmax; color:white; }
+	.fontS { font-family:Arial, Helvetica, sans-serif; font-size:0.7vmax; color:white; }
 	
 	*:has(> .tooltip) { text-decoration-style: dotted; text-decoration-line: underline; }
 
@@ -63,12 +42,15 @@
 		transition: opacity 160ms, transform 160ms, padding-bottom 160ms;
 		transition-timing-function: ease-out;
 
-		transform: translate(-20px, -40%);
+		visibility: hidden;
+
+		transform: translate(-20px, calc(-100% + 10px));
 		opacity: 0;
 	}
 	*:hover > .tooltip
 	{
-		transform: translate(-2px, -40%);
+		visibility: visible;
+		transform: translate(-2px, calc(-100% + 10px));
 
 		opacity: 1;
 	}
@@ -120,11 +102,11 @@
 		<div class="grow colSub" style="height:1vmax;"></div>
 		<div class="grow flexHorizontal">
 			<div class="colSub" style="width:10vw"></div>
-			<div class="flexVerticalCenter grow colSub fontXL">
+			<div class="flexVertical flexCenter grow colSub fontXL">
 				Daniel
 			</div>
 		
-			<div class="flexVerticalCenter colSub">
+			<div class="flexVertical flexCenter colSub">
 				<div class="grow fontL">
 					<span class="lang us">Language:</span>
 					<span class="lang fr">Langue:</span>
@@ -157,7 +139,8 @@
 		
 		<!-- Project -->
 		<div class="grow flexVertical">
-			<div class="grow flexHorizontal colMain" style="padding:1vmax;">
+			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
+				<img src="imgConnect4_robot.png" style="object-fit: contain; max-height: 10vmax;"/>
 				<div style="width:5vmax;"></div>
 				<div class="flexVertical">
 					<div class="fontL">
@@ -165,13 +148,7 @@
 						<span class="lang fr">Robot puissance 4:</span>
 					</div>
 					<div class="flexHorizontal fontM">
-						<span class="lang us">
-							- <span>User interface<span class="tooltip">Built from scratch using <a href="https://www.sfml-dev.org/">SFML</a></span></span><br/>
-							- Computer vision (using <a href="https://opencv.org/">OpenCV</a> and custom algorithms)<br/>
-							- Artificial intelligence algorithm (<a href="https://en.wikipedia.org/wiki/Negamax">negamax</a>, with optimizations)<br/>
-							- Arm positioning control<br/>
-							<span style="font-size: 0.8vmax;">Main technology: C++</span>
-						</span>
+						<span class="lang us">A robot able to play connect 4 in real life, calculating moves and placing down pieces on the board by itself!</span>
 						<span class="lang fr">
 							- Interface utilisateur (implémentation sur-mesure, avec la librairie <a href="https://www.sfml-dev.org/">SFML</a>)<br/>
 							- Vision par ordinateur (avec la librairie <a href="https://opencv.org/">OpenCV</a> et des algorithmes sur-mesure)<br/>
@@ -184,19 +161,31 @@
 			</div>
 			
 			
-			<div class="grow colSub flexVerticalCenter collapser fontM" style="padding:1vmax;">
+			<div class="grow colSub flexVertical flexCenter collapser fontM" style="padding:0.5vmax;">
 				<span class="lang us">Details</span>
 				<span class="lang fr">Détails</span>
-				<svg width="2vmax" height="2vmax" viewBox="4 4 16 16" fill="none">
+				<svg width="1vmax" height="1vmax" viewBox="4 4 16 16" fill="none">
 					<path d="M7 10L12 15L17 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
 			</div>
-			<div class="collapsible collapsed colSub flexVerticalCenter" style="padding:1vmax;">
-				<iframe src="https://www.youtube-nocookie.com/embed/nkJfJjksbng" style="width:50vmax;height:28.125vmax;" loading="lazy" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-				<div class="grid3" style="align-self:stretch;">
-					<span class="fontS"></span><span class="fontS"></span><span class="fontS">Notes</span>
-					<span class="fontS">Languages</span><span class="fontS">C++</span><span class="fontS">-</span>
-					<span class="fontS">Main Features</span><span class="fontS">User Interface, Computer Vision, Artificial Intelligence, Arm Positioning</span><span class="fontS">-</span>
+			<div class="collapsible collapsed colSub flexHorizontal flexCenter" style="padding:1vmax; gap:1vmax;">
+				<div class="flexHorizontal flexCenter" style="gap:3vmax;">
+					<div>
+						<div class="fontL">
+							<span class="lang us">Main work:</span>
+						</div>
+						<div class="fontM">
+							<span class="lang us">
+								- <span>User interface<span class="tooltip">Built from scratch using <a href="https://www.sfml-dev.org/">SFML</a><br/><br/><img src="imgConnect4_ui.png" style="max-height: 15vmax;max-width: 15vmax;"/></span></span><br/>
+								- <span>Computer vision<span class="tooltip">Uses <a href="https://opencv.org/">OpenCV</a> and tailor-made algorithms<br/><br/><img src="imgConnect4_camera.png" style="max-height: 15vmax;max-width: 15vmax;"/><br/><img src="imgConnect4_detection.png" style="max-height: 15vmax;max-width: 15vmax;"/></span></span><br/>
+								- <span>Artificial intelligence algorithm<span class="tooltip"><a href="https://en.wikipedia.org/wiki/Negamax">Negamax</a>, with additional optimizations</span></span><br/>
+								- Arm positioning control<br/>
+								<span class="fontS">Programmed in C++</span>
+							</span>
+						</div>
+					</div>
+
+					<iframe src="https://www.youtube-nocookie.com/embed/nkJfJjksbng" style="width:50vmax;height:28.125vmax;" loading="lazy" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 				</div>
 			</div>
 		</div>
