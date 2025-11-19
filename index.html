@@ -6,6 +6,7 @@
 		padding: 0px;
 		margin: 0px;
 	}
+	
 	.flexVertical
 	{
 		display: flex;
@@ -37,40 +38,50 @@
 	.colMain { background-color: #303840; }
 	.colSub { background-color: #202830; }
 
-	.fontXL { font-family:Arial, Helvetica, sans-serif; font-size:6vmax; color:white; }
-	.fontL { font-family:Arial, Helvetica, sans-serif; font-size:3vmax; color:white; }
-	.fontM { font-family:Arial, Helvetica, sans-serif; font-size:1.5vmax; color:white; }
-	.fontS { font-family:Arial, Helvetica, sans-serif; font-size:1vmax; color:white; }
+	.fontXL { font-family:Arial, Helvetica, sans-serif; font-size:5vmax; color:white; }
+	.fontL { font-family:Arial, Helvetica, sans-serif; font-size:2vmax; color:white; }
+	.fontM { font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white; }
+	.fontS { font-family:Arial, Helvetica, sans-serif; font-size:0.8vmax; color:white; }
+	
+	*:has(> .tooltip) { text-decoration-style: dotted; text-decoration-line: underline; }
 
-	.grow
+
+	.tooltip
 	{
-		flex-grow: 1;
-	}
-	.grow1
-	{
-		flex-grow: 1;
-	}
-	.grow5
-	{
-		flex-grow: 5;
-	}
-	.grow8
-	{
-		flex-grow: 8;
-	}
-	.scriptFlagFr path
-	{
-		cursor: pointer;
+		font-family:Arial, Helvetica, sans-serif; font-size:0.8vmax; color:white;
+		position: absolute;
+
+		z-index: 1;
+		background: #403830;
+		border-radius: 0.2vmax;
+		border-style: solid;
+		border-color: black;
+		padding: 0.3vmax;
 		
+		user-select: none;
+
+		transition: opacity 160ms, transform 160ms, padding-bottom 160ms;
+		transition-timing-function: ease-out;
+
+		transform: translate(-20px, -40%);
+		opacity: 0;
 	}
-	.scriptFlagUs path
+	*:hover > .tooltip
 	{
-		cursor: pointer;
+		transform: translate(-2px, -40%);
+
+		opacity: 1;
 	}
-	.hidden
-	{
-		display: none;
-	}
+	
+
+	.grow { flex-grow: 1; }
+
+	.scriptFlagFr path { cursor: pointer; }
+	.scriptFlagUs path { cursor: pointer; }
+
+	.grid2 { display: grid; grid-template-columns: auto auto; }
+	.grid3 { display: grid; grid-template-columns: auto auto auto; gap:5px; }
+
 	.collapser
 	{
 		cursor: pointer;
@@ -106,8 +117,8 @@
 
 	<div class="flexVertical" style="width:90vw">
 		<!-- Name & Language section -->
-		<div class="grow1 colSub" style="height:1vmax;"></div>
-		<div class="grow1 flexHorizontal">
+		<div class="grow colSub" style="height:1vmax;"></div>
+		<div class="grow flexHorizontal">
 			<div class="colSub" style="width:10vw"></div>
 			<div class="flexVerticalCenter grow colSub fontXL">
 				Daniel
@@ -138,15 +149,15 @@
 			</div>
 			<div class="colSub" style="width:10vw"></div>
 		</div>
-		<div class="grow1 colSub" style="height:1vmax;"></div>
+		<div class="grow colSub" style="height:1vmax;"></div>
 		
-		<!-- Vertical divider (long) -->
-		<div class="grow1 flexHorizontal" style="height:10vmax;">
+		<!-- Vertical divider -->
+		<div class="grow flexHorizontal" style="height:6vmax;">
 		</div>
 		
 		<!-- Project -->
-		<div class="grow1 flexVertical">
-			<div class="grow1 flexHorizontal colMain" style="padding:1vmax;">
+		<div class="grow flexVertical">
+			<div class="grow flexHorizontal colMain" style="padding:1vmax;">
 				<div style="width:5vmax;"></div>
 				<div class="flexVertical">
 					<div class="fontL">
@@ -155,7 +166,7 @@
 					</div>
 					<div class="flexHorizontal fontM">
 						<span class="lang us">
-							- User interface (from scratch, using <a href="https://www.sfml-dev.org/">SFML</a> library)<br/>
+							- <span>User interface<span class="tooltip">Built from scratch using <a href="https://www.sfml-dev.org/">SFML</a></span></span><br/>
 							- Computer vision (using <a href="https://opencv.org/">OpenCV</a> and custom algorithms)<br/>
 							- Artificial intelligence algorithm (<a href="https://en.wikipedia.org/wiki/Negamax">negamax</a>, with optimizations)<br/>
 							- Arm positioning control<br/>
@@ -173,24 +184,29 @@
 			</div>
 			
 			
-			<div class="grow1 colSub flexVerticalCenter collapser fontM" style="padding:1vmax;">
+			<div class="grow colSub flexVerticalCenter collapser fontM" style="padding:1vmax;">
 				<span class="lang us">Details</span>
 				<span class="lang fr">Détails</span>
 				<svg width="2vmax" height="2vmax" viewBox="4 4 16 16" fill="none">
 					<path d="M7 10L12 15L17 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
 			</div>
-			<div class="collapsible collapsed colSub flexHorizontal" style="padding:1vmax; justify-content:center;">
+			<div class="collapsible collapsed colSub flexVerticalCenter" style="padding:1vmax;">
 				<iframe src="https://www.youtube-nocookie.com/embed/nkJfJjksbng" style="width:50vmax;height:28.125vmax;" loading="lazy" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+				<div class="grid3" style="align-self:stretch;">
+					<span class="fontS"></span><span class="fontS"></span><span class="fontS">Notes</span>
+					<span class="fontS">Languages</span><span class="fontS">C++</span><span class="fontS">-</span>
+					<span class="fontS">Main Features</span><span class="fontS">User Interface, Computer Vision, Artificial Intelligence, Arm Positioning</span><span class="fontS">-</span>
+				</div>
 			</div>
 		</div>
 		
 		<!-- Vertical divider -->
-		<div class="grow1 flexHorizontal" style="height:6vmax;">
+		<div class="grow flexHorizontal" style="height:6vmax;">
 		</div>
 		
 		<!-- Project -->
-		<div class="grow1 flexHorizontal">
+		<div class="grow flexHorizontal">
 			<div class="flexVerticalCenter">
 				<iframe src="https://www.youtube-nocookie.com/embed/Nc2yOlgUCGs" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 			</div>
@@ -220,11 +236,11 @@
 		</div>
 		
 		<!-- Vertical divider -->
-		<div class="grow1 flexHorizontal" style="height:6vmax;">
+		<div class="grow flexHorizontal" style="height:6vmax;">
 		</div>
 		
 		<!-- Project -->
-		<div class="grow1 flexHorizontal">
+		<div class="grow flexHorizontal">
 			<div class="flexVerticalCenter">
 				<iframe src="https://www.youtube-nocookie.com/embed/2ofHvKZJBVA" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 			</div>
@@ -254,11 +270,11 @@
 		</div>
 		
 		<!-- Vertical divider -->
-		<div class="grow1 flexHorizontal" style="height:6vmax;">
+		<div class="grow flexHorizontal" style="height:6vmax;">
 		</div>
 		
 		<!-- Project -->
-		<div class="grow1 flexHorizontal">
+		<div class="grow flexHorizontal">
 			<div class="flexVerticalCenter">
 				
 			</div>
@@ -280,11 +296,11 @@
 		</div>
 		
 		<!-- Vertical divider -->
-		<div class="grow1 flexHorizontal" style="height:6vmax;">
+		<div class="grow flexHorizontal" style="height:6vmax;">
 		</div>
 		
 		<!-- Project -->
-		<div class="grow1 flexHorizontal">
+		<div class="grow flexHorizontal">
 			<div class="flexVerticalCenter">
 				
 			</div>
@@ -306,11 +322,11 @@
 		</div>
 		
 		<!-- Vertical divider -->
-		<div class="grow1 flexHorizontal" style="height:6vmax;">
+		<div class="grow flexHorizontal" style="height:6vmax;">
 		</div>
 		
 		<!-- Project -->
-		<div class="grow1 flexHorizontal">
+		<div class="grow flexHorizontal">
 			<div class="flexVerticalCenter">
 				
 			</div>
@@ -332,11 +348,11 @@
 		</div>
 		
 		<!-- Vertical divider -->
-		<div class="grow1 flexHorizontal" style="height:6vmax;">
+		<div class="grow flexHorizontal" style="height:6vmax;">
 		</div>
 		
 		<!-- Project -->
-		<div class="grow1 flexHorizontal">
+		<div class="grow flexHorizontal">
 			<div class="flexVerticalCenter">
 				
 			</div>
@@ -364,7 +380,7 @@
 		</div>
 		
 		<!-- Vertical divider (long) -->
-		<div class="grow1 flexHorizontal" style="height:10vmax;">
+		<div class="grow flexHorizontal" style="height:10vmax;">
 		</div>
 
 
@@ -414,8 +430,11 @@
 
 		// Collapsers
 		var collapsers = document.getElementsByClassName("collapser");
+		for (i = 0; i < collapsers.length; i += 1) { collapsers[i].nextElementSibling.style.maxHeight = "100vh"; collapsers[i].addEventListener("click", toggleCollapse); }
 
-		for (i = 0; i < collapsers.length; i += 1) { collapsers[i].nextElementSibling.style.maxHeight = collapsers[i].nextElementSibling.scrollHeight + "px"; collapsers[i].addEventListener("click", toggleCollapse); }
+		// Links
+		var links = document.getElementsByTagName("a");
+		for (i = 0; i < links.length; i += 1) { links[i].setAttribute("target", "_blank"); }
 	}
 	init();
 </script>
