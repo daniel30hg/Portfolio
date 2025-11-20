@@ -31,7 +31,7 @@
 		position: absolute;
 
 		z-index: 1;
-		background: #403830;
+		background: #101010;
 		border-radius: 0.2vmax;
 		border-style: solid;
 		border-color: black;
@@ -137,7 +137,7 @@
 		<div class="grow flexHorizontal" style="height:6vmax;">
 		</div>
 		
-		<!-- Project -->
+		<!-- Project (Connect 4) -->
 		<div class="grow flexVertical">
 			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
 				<img src="imgConnect4_robot.png" style="object-fit: contain; max-height: 10vmax;"/>
@@ -149,13 +149,7 @@
 					</div>
 					<div class="flexHorizontal fontM">
 						<span class="lang us">A robot able to play connect 4 in real life, calculating moves and placing down pieces on the board by itself!</span>
-						<span class="lang fr">
-							- Interface utilisateur (implémentation sur-mesure, avec la librairie <a href="https://www.sfml-dev.org/">SFML</a>)<br/>
-							- Vision par ordinateur (avec la librairie <a href="https://opencv.org/">OpenCV</a> et des algorithmes sur-mesure)<br/>
-							- Intelligence artificielle (algorithme <a href="https://en.wikipedia.org/wiki/Negamax">negamax</a>, avec optimizations)<br/>
-							- Controle de la position du bras<br/>
-							<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
-						</span>
+						<span class="lang fr">---</span>
 					</div>
 				</div>
 			</div>
@@ -173,6 +167,7 @@
 					<div>
 						<div class="fontL">
 							<span class="lang us">Main work:</span>
+							<span class="lang fr">---:</span>
 						</div>
 						<div class="fontM">
 							<span class="lang us">
@@ -181,6 +176,9 @@
 								- <span>Artificial intelligence algorithm<span class="tooltip"><a href="https://en.wikipedia.org/wiki/Negamax">Negamax</a>, with additional optimizations</span></span><br/>
 								- Arm positioning control<br/>
 								<span class="fontS">Programmed in C++</span>
+							</span>
+							<span class="lang fr">
+								---
 							</span>
 						</div>
 					</div>
@@ -194,32 +192,54 @@
 		<div class="grow flexHorizontal" style="height:6vmax;">
 		</div>
 		
-		<!-- Project -->
-		<div class="grow flexHorizontal">
-			<div class="flexVerticalCenter">
-				<iframe src="https://www.youtube-nocookie.com/embed/Nc2yOlgUCGs" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-			</div>
-			<div style="width:5vmax;"></div>
-			<div class="flexVertical">
-				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
-					<span class="lang us">2D platformer game:</span>
-					<span class="lang fr">Jeu de plateforme 2D:</span>
+		
+		<!-- Project (Game) -->
+		<div class="grow flexVertical">
+			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
+				<img src="imgGame_level.png" style="object-fit: contain; max-height: 10vmax;"/>
+				<div style="width:5vmax;"></div>
+				<div class="flexVertical">
+					<div class="fontL">
+						<span class="lang us">2D platformer game:</span>
+						<span class="lang fr">Jeu de plateforme 2D:</span>
+					</div>
+					<div class="flexHorizontal fontM">
+						<span class="lang us">A 2D videogame about a jumping robot dodging lasers with a grappling hook!</span>
+						<span class="lang fr">---</span>
+					</div>
 				</div>
-				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
-					<span class="lang us">
-						- Collision detection<br/>
-						- Shadows & shaders<br/>
-						- Entity management<br/>
-						- Level editor<br/>
-						<span style="font-size: 0.8vmax;">Main technology: C++</span>
-					</span>
-					<span class="lang fr">
-						- Détection de collisions<br/>
-						- Ombres et shaders<br/>
-						- Gestion des entitées<br/>
-						- Éditeur de niveaux<br/>
-						<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
-					</span>
+			</div>
+			
+			
+			<div class="grow colSub flexVertical flexCenter collapser fontM" style="padding:0.5vmax;">
+				<span class="lang us">Details</span>
+				<span class="lang fr">Détails</span>
+				<svg width="1vmax" height="1vmax" viewBox="4 4 16 16" fill="none">
+					<path d="M7 10L12 15L17 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</div>
+			<div class="collapsible collapsed colSub flexHorizontal flexCenter" style="padding:1vmax; gap:1vmax;">
+				<div class="flexHorizontal flexCenter" style="gap:3vmax;">
+					<div>
+						<div class="fontL">
+							<span class="lang us">Main work:</span>
+							<span class="lang fr">---:</span>
+						</div>
+						<div class="fontM">
+							<span class="lang us">
+								- <span>Collision detection<span class="tooltip">Built from scratch using <a href="https://www.sfml-dev.org/">SFML</a><br/><br/><img src="imgConnect4_ui.png" style="max-height: 15vmax;max-width: 15vmax;"/></span></span><br/>
+								- <span>Shadows & shaders<span class="tooltip">Uses <a href="https://opencv.org/">OpenCV</a> and tailor-made algorithms<br/><br/><img src="imgConnect4_camera.png" style="max-height: 15vmax;max-width: 15vmax;"/><br/><img src="imgConnect4_detection.png" style="max-height: 15vmax;max-width: 15vmax;"/></span></span><br/>
+								- <span>Entity management<span class="tooltip"><a href="https://en.wikipedia.org/wiki/Negamax">Negamax</a>, with additional optimizations</span></span><br/>
+								- Level editor<br/>
+								<span class="fontS">Programmed in C++</span>
+							</span>
+							<span class="lang fr">
+								---
+							</span>
+						</div>
+					</div>
+
+					<iframe src="https://www.youtube-nocookie.com/embed/Nc2yOlgUCGs" style="width:50vmax;height:28.125vmax;" loading="lazy" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 				</div>
 			</div>
 		</div>
@@ -228,58 +248,50 @@
 		<div class="grow flexHorizontal" style="height:6vmax;">
 		</div>
 		
-		<!-- Project -->
-		<div class="grow flexHorizontal">
-			<div class="flexVerticalCenter">
-				<iframe src="https://www.youtube-nocookie.com/embed/2ofHvKZJBVA" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-			</div>
-			<div style="width:5vmax;"></div>
-			<div class="flexVertical">
-				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
-					<span class="lang us">2D physics engine:</span>
-					<span class="lang fr">Moteur physique 2D:</span>
-				</div>
-				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
-					<span class="lang us">
-						- Broad phase optimization<br/>
-						- Support for custom geometry<br/>
-						- Moment of inertia computation<br/>
-						- Handling of friction and restitution<br/>
-						<span style="font-size: 0.8vmax;">Main technology: C++</span>
-					</span>
-					<span class="lang fr">
-						- Optimisation avec phase large<br/>
-						- Géometrie arbitraire possible<br/>
-						- Calcul du moment d'inertie<br/>
-						- Gestion des coefficients de friction et restitution<br/>
-						<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
-					</span>
+		<!-- Project (Physics Engine) -->
+		<div class="grow flexVertical">
+			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
+				<img src="imgPhysics_scene.png" style="object-fit: contain; max-height: 10vmax;"/>
+				<div style="width:5vmax;"></div>
+				<div class="flexVertical">
+					<div class="fontL">
+						<span class="lang us">2D physics engine:</span>
+						<span class="lang fr">Moteur physique 2D:</span>
+					</div>
+					<div class="flexHorizontal fontM">
+						<span class="lang us">Full rigid body 2D physics simulation!</span>
+						<span class="lang fr">---</span>
+					</div>
 				</div>
 			</div>
-		</div>
-		
-		<!-- Vertical divider -->
-		<div class="grow flexHorizontal" style="height:6vmax;">
-		</div>
-		
-		<!-- Project -->
-		<div class="grow flexHorizontal">
-			<div class="flexVerticalCenter">
-				
+			
+			
+			<div class="grow colSub flexVertical flexCenter collapser fontM" style="padding:0.5vmax;">
+				<span class="lang us">Details</span>
+				<span class="lang fr">Détails</span>
+				<svg width="1vmax" height="1vmax" viewBox="4 4 16 16" fill="none">
+					<path d="M7 10L12 15L17 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
 			</div>
-			<div style="width:5vmax;"></div>
-			<div class="flexVertical">
-				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
-					<span class="lang us">Syntax parser generator:</span>
-					<span class="lang fr">Générateur de parseur de syntaxe:</span>
-				</div>
-				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
-					<span class="lang us">
-						<span style="font-size: 0.8vmax;">Main technology: C++</span>
-					</span>
-					<span class="lang fr">
-						<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
-					</span>
+			<div class="collapsible collapsed colSub flexHorizontal flexCenter" style="padding:1vmax; gap:1vmax;">
+				<div class="flexHorizontal flexCenter" style="gap:3vmax;">
+					<div>
+						<div class="fontL">
+							<span class="lang us">Main work:</span>
+							<span class="lang fr">---:</span>
+						</div>
+						<div class="fontM">
+							<span class="lang us">
+								---
+								<span class="fontS">Programmed in C++</span>
+							</span>
+							<span class="lang fr">
+								---
+							</span>
+						</div>
+					</div>
+
+					<iframe src="https://www.youtube-nocookie.com/embed/2ofHvKZJBVA" style="width:50vmax;height:28.125vmax;" loading="lazy" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 				</div>
 			</div>
 		</div>
@@ -288,50 +300,48 @@
 		<div class="grow flexHorizontal" style="height:6vmax;">
 		</div>
 		
-		<!-- Project -->
-		<div class="grow flexHorizontal">
-			<div class="flexVerticalCenter">
-				
-			</div>
-			<div style="width:5vmax;"></div>
-			<div class="flexVertical">
-				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
-					<span class="lang us">Arduino air quality sensor:</span>
-					<span class="lang fr">Capteur de qualité d'air Arduino:</span>
-				</div>
-				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
-					<span class="lang us">
-						<span style="font-size: 0.8vmax;">Main technology: C++</span>
-					</span>
-					<span class="lang fr">
-						<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
-					</span>
+		<!-- Project (Syntax Parser Generator) -->
+		<div class="grow flexVertical">
+			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
+				<img src="imgParser_example.png" style="object-fit: contain; max-height: 10vmax;"/>
+				<div style="width:5vmax;"></div>
+				<div class="flexVertical">
+					<div class="fontL">
+						<span class="lang us">Syntax parser generator:</span>
+						<span class="lang fr">Générateur de parseur de syntaxe:</span>
+					</div>
+					<div class="flexHorizontal fontM">
+						<span class="lang us">A meta-program, which takes in a set of syntax rules and outputs a program able to parse those rules!</span>
+						<span class="lang fr">---</span>
+					</div>
 				</div>
 			</div>
-		</div>
-		
-		<!-- Vertical divider -->
-		<div class="grow flexHorizontal" style="height:6vmax;">
-		</div>
-		
-		<!-- Project -->
-		<div class="grow flexHorizontal">
-			<div class="flexVerticalCenter">
-				
+			
+			
+			<div class="grow colSub flexVertical flexCenter collapser fontM" style="padding:0.5vmax;">
+				<span class="lang us">Details</span>
+				<span class="lang fr">Détails</span>
+				<svg width="1vmax" height="1vmax" viewBox="4 4 16 16" fill="none">
+					<path d="M7 10L12 15L17 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
 			</div>
-			<div style="width:5vmax;"></div>
-			<div class="flexVertical">
-				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
-					<span class="lang us">2D image positioning algorithm:</span>
-					<span class="lang fr">Algorithme de positionement d'images 2D:</span>
-				</div>
-				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
-					<span class="lang us">
-						<span style="font-size: 0.8vmax;">Main technology: C++</span>
-					</span>
-					<span class="lang fr">
-						<span style="font-size: 0.8vmax;">Technologie primaire: C++</span>
-					</span>
+			<div class="collapsible collapsed colSub flexHorizontal flexCenter" style="padding:1vmax; gap:1vmax;">
+				<div class="flexHorizontal flexCenter" style="gap:3vmax;">
+					<div>
+						<div class="fontL">
+							<span class="lang us">Main work:</span>
+							<span class="lang fr">---:</span>
+						</div>
+						<div class="fontM">
+							<span class="lang us">
+								---
+								<span class="fontS">Programmed in C++</span>
+							</span>
+							<span class="lang fr">
+								---
+							</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -340,30 +350,100 @@
 		<div class="grow flexHorizontal" style="height:6vmax;">
 		</div>
 		
-		<!-- Project -->
-		<div class="grow flexHorizontal">
-			<div class="flexVerticalCenter">
-				
-			</div>
-			<div style="width:5vmax;"></div>
-			<div class="flexVertical">
-				<div style="font-family:Arial, Helvetica, sans-serif; font-size:4vmax; color:white;">
-					<span class="lang us">This portfolio:</span>
-					<span class="lang fr">Ce portfolio:</span>
+		<!-- Project (2D image positioning algorithm) -->
+		<div class="grow flexVertical">
+			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
+				<img src="imgSimilarity_thumbnail.png" style="object-fit: contain; max-height: 10vmax;"/>
+				<div style="width:5vmax;"></div>
+				<div class="flexVertical">
+					<div class="fontL">
+						<span class="lang us">2D image positioning algorithm:</span>
+						<span class="lang fr">Algorithme de positionement d'images 2D:</span>
+					</div>
+					<div class="flexHorizontal fontM">
+						<span class="lang us">An algorithm that positions images based on their similiarities!</span>
+						<span class="lang fr">---</span>
+					</div>
 				</div>
-				<div class="flexHorizontal" style="font-family:Arial, Helvetica, sans-serif; font-size:1.2vmax; color:white;">
-					<span class="lang us">
-						- Automatically adjusts to different screen sizes<br/>
-						- Automated language detection<br/>
-						- Made in text editors, without external tools<br/>
-						<span style="font-size: 0.8vmax;">Main technology: HTML, CSS, Javascript</span>
-					</span>
-					<span class="lang fr">
-						- S'ajuste automatiquement à différentes tailles d'écrans<br/>
-						- Détection automatique de la langue<br/>
-						- Créé dans des éditeurs de texte, sans outils externe<br/>
-						<span style="font-size: 0.8vmax;">Technologie primaire: HTML, CSS, Javascript</span>
-					</span>
+			</div>
+			
+			
+			<div class="grow colSub flexVertical flexCenter collapser fontM" style="padding:0.5vmax;">
+				<span class="lang us">Details</span>
+				<span class="lang fr">Détails</span>
+				<svg width="1vmax" height="1vmax" viewBox="4 4 16 16" fill="none">
+					<path d="M7 10L12 15L17 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</div>
+			<div class="collapsible collapsed colSub flexHorizontal flexCenter" style="padding:1vmax; gap:1vmax;">
+				<div class="flexHorizontal flexCenter" style="gap:3vmax;">
+					<div>
+						<div class="fontL">
+							<span class="lang us">Main work:</span>
+							<span class="lang fr">---:</span>
+						</div>
+						<div class="fontM">
+							<span class="lang us">
+								---
+								<span class="fontS">Programmed in C++</span>
+							</span>
+							<span class="lang fr">
+								---
+							</span>
+						</div>
+					</div>
+					
+					<img src="imgSimilarity_animation.gif" style="object-fit: contain; max-height: 50vmax;"/>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Vertical divider -->
+		<div class="grow flexHorizontal" style="height:6vmax;">
+		</div>
+		
+		<!-- Project (Portfolio) -->
+		<div class="grow flexVertical">
+			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
+				<img src="imgPortfolio_thumbnail.png" style="object-fit: contain; max-height: 10vmax;"/>
+				<div style="width:5vmax;"></div>
+				<div class="flexVertical">
+					<div class="fontL">
+						<span class="lang us">This portfolio:</span>
+						<span class="lang fr">Ce portfolio:</span>
+					</div>
+					<div class="flexHorizontal fontM">
+						<span class="lang us">The portfolio you are reading right now!</span>
+						<span class="lang fr">---</span>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="grow colSub flexVertical flexCenter collapser fontM" style="padding:0.5vmax;">
+				<span class="lang us">Details</span>
+				<span class="lang fr">Détails</span>
+				<svg width="1vmax" height="1vmax" viewBox="4 4 16 16" fill="none">
+					<path d="M7 10L12 15L17 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</div>
+			<div class="collapsible collapsed colSub flexHorizontal flexCenter" style="padding:1vmax; gap:1vmax;">
+				<div class="flexHorizontal flexCenter" style="gap:3vmax;">
+					<div>
+						<div class="fontL">
+							<span class="lang us">Main work:</span>
+							<span class="lang fr">---:</span>
+						</div>
+						<div class="fontM">
+							<span class="lang us">
+								---
+								<span class="fontS">Programmed in C++</span>
+							</span>
+							<span class="lang fr">
+								---
+							</span>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -371,9 +451,6 @@
 		<!-- Vertical divider (long) -->
 		<div class="grow flexHorizontal" style="height:10vmax;">
 		</div>
-
-
-
 	</div>
 
 	<div class="colbg" style="width:5vw"></div>
