@@ -134,22 +134,22 @@
 		<div class="grow colSub" style="height:1vmax;"></div>
 		
 		<!-- Vertical divider -->
-		<div class="grow flexHorizontal" style="height:6vmax;">
+		<div class="grow flexHorizontal" style="height:3vmax;">
 		</div>
 		
-		<!-- Project (Connect 4) -->
+		<!-- Project (Syntax Parser Generator) -->
 		<div class="grow flexVertical">
 			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
-				<img src="imgConnect4_robot.png" style="object-fit: contain; max-height: 10vmax;"/>
+				<img src="imgParser_example.png" style="object-fit: contain; max-height: 10vmax; min-width:20vmax;"/>
 				<div style="width:5vmax;"></div>
 				<div class="flexVertical">
 					<div class="fontL">
-						<span class="lang us">Connect 4 robot:</span>
-						<span class="lang fr">Robot puissance 4:</span>
+						<span class="lang us">Syntax parser generator:</span>
+						<span class="lang fr">Générateur de parseur de syntaxe:</span>
 					</div>
 					<div class="flexHorizontal fontM">
-						<span class="lang us">A robot able to play connect 4 in real life, calculating moves and placing down pieces on the board by itself!</span>
-						<span class="lang fr">---</span>
+						<span class="lang us">A meta-program, which takes in a set of syntax rules and outputs a program able to parse those rules!</span>
+						<span class="lang fr">Un meta-programme, recevant une collection de règles de syntaxe et produit un programme capable d'analyser ces règles!</span>
 					</div>
 				</div>
 			</div>
@@ -167,91 +167,36 @@
 					<div>
 						<div class="fontL">
 							<span class="lang us">Main work:</span>
-							<span class="lang fr">---:</span>
+							<span class="lang fr">Activitées principales:</span>
 						</div>
 						<div class="fontM">
 							<span class="lang us">
-								- <span>User interface<span class="tooltip">Built from scratch using <a href="https://www.sfml-dev.org/">SFML</a><br/><br/><img src="imgConnect4_ui.png" style="max-height: 15vmax;max-width: 15vmax;"/></span></span><br/>
-								- <span>Computer vision<span class="tooltip">Uses <a href="https://opencv.org/">OpenCV</a> and tailor-made algorithms<br/><br/><img src="imgConnect4_camera.png" style="max-height: 15vmax;max-width: 15vmax;"/><br/><img src="imgConnect4_detection.png" style="max-height: 15vmax;max-width: 15vmax;"/></span></span><br/>
-								- <span>Artificial intelligence algorithm<span class="tooltip"><a href="https://en.wikipedia.org/wiki/Negamax">Negamax</a>, with additional optimizations</span></span><br/>
-								- Arm positioning control<br/>
+								- Creation of syntax format<br/>
+								- Detection of unique patterns in the syntax<br/>
+								- Generation of parser program with function callbacks<br/>
 								<span class="fontS">Programmed in C++</span>
 							</span>
 							<span class="lang fr">
-								---
+								- Création d'un format de syntaxe<br/>
+								- Detéction de motifs unique dans la syntaxe<br/>
+								- Génération du programme d'analyse avec des fonctions "callback"<br/>
+								<span class="fontS">Programmé en C++</span>
 							</span>
 						</div>
 					</div>
-
-					<iframe src="https://www.youtube-nocookie.com/embed/nkJfJjksbng" style="width:50vmax;height:28.125vmax;" loading="lazy" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+					<img src="imgParser_example.png" style="object-fit: contain; max-width: 80vh;"/>
 				</div>
 			</div>
 		</div>
 		
 		<!-- Vertical divider -->
-		<div class="grow flexHorizontal" style="height:6vmax;">
-		</div>
-		
-		
-		<!-- Project (Game) -->
-		<div class="grow flexVertical">
-			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
-				<img src="imgGame_level.png" style="object-fit: contain; max-height: 10vmax;"/>
-				<div style="width:5vmax;"></div>
-				<div class="flexVertical">
-					<div class="fontL">
-						<span class="lang us">2D platformer game:</span>
-						<span class="lang fr">Jeu de plateforme 2D:</span>
-					</div>
-					<div class="flexHorizontal fontM">
-						<span class="lang us">A 2D videogame about a jumping robot dodging lasers with a grappling hook!</span>
-						<span class="lang fr">---</span>
-					</div>
-				</div>
-			</div>
-			
-			
-			<div class="grow colSub flexVertical flexCenter collapser fontM" style="padding:0.5vmax;">
-				<span class="lang us">Details</span>
-				<span class="lang fr">Détails</span>
-				<svg width="1vmax" height="1vmax" viewBox="4 4 16 16" fill="none">
-					<path d="M7 10L12 15L17 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-				</svg>
-			</div>
-			<div class="collapsible collapsed colSub flexHorizontal flexCenter" style="padding:1vmax; gap:1vmax;">
-				<div class="flexHorizontal flexCenter" style="gap:3vmax;">
-					<div>
-						<div class="fontL">
-							<span class="lang us">Main work:</span>
-							<span class="lang fr">---:</span>
-						</div>
-						<div class="fontM">
-							<span class="lang us">
-								- <span>Collision detection<span class="tooltip">Built from scratch using <a href="https://www.sfml-dev.org/">SFML</a><br/><br/><img src="imgConnect4_ui.png" style="max-height: 15vmax;max-width: 15vmax;"/></span></span><br/>
-								- <span>Shadows & shaders<span class="tooltip">Uses <a href="https://opencv.org/">OpenCV</a> and tailor-made algorithms<br/><br/><img src="imgConnect4_camera.png" style="max-height: 15vmax;max-width: 15vmax;"/><br/><img src="imgConnect4_detection.png" style="max-height: 15vmax;max-width: 15vmax;"/></span></span><br/>
-								- <span>Entity management<span class="tooltip"><a href="https://en.wikipedia.org/wiki/Negamax">Negamax</a>, with additional optimizations</span></span><br/>
-								- Level editor<br/>
-								<span class="fontS">Programmed in C++</span>
-							</span>
-							<span class="lang fr">
-								---
-							</span>
-						</div>
-					</div>
-
-					<iframe src="https://www.youtube-nocookie.com/embed/Nc2yOlgUCGs" style="width:50vmax;height:28.125vmax;" loading="lazy" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-				</div>
-			</div>
-		</div>
-		
-		<!-- Vertical divider -->
-		<div class="grow flexHorizontal" style="height:6vmax;">
+		<div class="grow flexHorizontal" style="height:3vmax;">
 		</div>
 		
 		<!-- Project (Physics Engine) -->
 		<div class="grow flexVertical">
 			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
-				<img src="imgPhysics_scene.png" style="object-fit: contain; max-height: 10vmax;"/>
+				<img src="imgPhysics_scene.png" style="object-fit: contain; max-height: 10vmax; min-width:20vmax;"/>
 				<div style="width:5vmax;"></div>
 				<div class="flexVertical">
 					<div class="fontL">
@@ -260,7 +205,7 @@
 					</div>
 					<div class="flexHorizontal fontM">
 						<span class="lang us">Full rigid body 2D physics simulation!</span>
-						<span class="lang fr">---</span>
+						<span class="lang fr">Simulation de corps rigides en 2D!</span>
 					</div>
 				</div>
 			</div>
@@ -278,15 +223,22 @@
 					<div>
 						<div class="fontL">
 							<span class="lang us">Main work:</span>
-							<span class="lang fr">---:</span>
+							<span class="lang fr">Activitées principales:</span>
 						</div>
 						<div class="fontM">
 							<span class="lang us">
-								---
+								- Broad phase and narrow phase<br/>
+								- Concave shape decomposition algorithm<br/>
+								- Features friction & restitution<br/>
+								- Tunneling detection<br/>
 								<span class="fontS">Programmed in C++</span>
 							</span>
 							<span class="lang fr">
-								---
+								- Phase large et phase étroite<br/>
+								- Algorithme de décomposition d'objets concaves<br/>
+								- Simulation de friction et restitution<br/>
+								- Détection de "tunneling"<br/>
+								<span class="fontS">Programmé en C++</span>
 							</span>
 						</div>
 					</div>
@@ -297,22 +249,22 @@
 		</div>
 		
 		<!-- Vertical divider -->
-		<div class="grow flexHorizontal" style="height:6vmax;">
+		<div class="grow flexHorizontal" style="height:3vmax;">
 		</div>
 		
-		<!-- Project (Syntax Parser Generator) -->
+		<!-- Project (Connect 4) -->
 		<div class="grow flexVertical">
 			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
-				<img src="imgParser_example.png" style="object-fit: contain; max-height: 10vmax;"/>
+				<img src="imgConnect4_robot.png" style="object-fit: contain; max-height: 10vmax; min-width:20vmax;"/>
 				<div style="width:5vmax;"></div>
 				<div class="flexVertical">
 					<div class="fontL">
-						<span class="lang us">Syntax parser generator:</span>
-						<span class="lang fr">Générateur de parseur de syntaxe:</span>
+						<span class="lang us">Connect 4 robot:</span>
+						<span class="lang fr">Robot puissance 4:</span>
 					</div>
 					<div class="flexHorizontal fontM">
-						<span class="lang us">A meta-program, which takes in a set of syntax rules and outputs a program able to parse those rules!</span>
-						<span class="lang fr">---</span>
+						<span class="lang us">A robot able to play Connect 4 in real life, calculating moves and placing down pieces on the board by itself!</span>
+						<span class="lang fr">Un robot capable de jouer à Puissance 4 dans la vie réelle, calculant ses mouvements et placeant les jetons dans le plateau par soi-même!</span>
 					</div>
 				</div>
 			</div>
@@ -330,30 +282,99 @@
 					<div>
 						<div class="fontL">
 							<span class="lang us">Main work:</span>
-							<span class="lang fr">---:</span>
+							<span class="lang fr">Activitées principales:</span>
 						</div>
 						<div class="fontM">
 							<span class="lang us">
-								---
+								- <span>User interface<span class="tooltip">Built from scratch using <a href="https://www.sfml-dev.org/">SFML</a><br/><br/><img src="imgConnect4_ui.png" style="max-height: 15vmax;max-width: 15vmax;"/></span></span><br/>
+								- <span>Computer vision<span class="tooltip">Uses <a href="https://opencv.org/">OpenCV</a> and tailor-made algorithms<br/><br/><img src="imgConnect4_camera.png" style="max-height: 15vmax;max-width: 15vmax;"/><br/><img src="imgConnect4_detection.png" style="max-height: 15vmax;max-width: 15vmax;"/></span></span><br/>
+								- <span>Artificial intelligence algorithm<span class="tooltip"><a href="https://en.wikipedia.org/wiki/Negamax">Negamax</a>, with additional optimizations</span></span><br/>
+								- Arm positioning control<br/>
 								<span class="fontS">Programmed in C++</span>
 							</span>
 							<span class="lang fr">
-								---
+								- <span>Interface utilisateur<span class="tooltip">Construit sur-mesure avec <a href="https://www.sfml-dev.org/fr/">SFML</a><br/><br/><img src="imgConnect4_ui.png" style="max-height: 15vmax;max-width: 15vmax;"/></span></span><br/>
+								- <span>Vision par ordinateur<span class="tooltip">Utilise <a href="https://opencv.org/">OpenCV</a> avec des algorithmes sur-mesure<br/><br/><img src="imgConnect4_camera.png" style="max-height: 15vmax;max-width: 15vmax;"/><br/><img src="imgConnect4_detection.png" style="max-height: 15vmax;max-width: 15vmax;"/></span></span><br/>
+								- <span>Algorithme d'intelligence artificielle<span class="tooltip"><a href="https://en.wikipedia.org/wiki/Negamax">Negamax</a>, avec des optimisations supplémentaires</span></span><br/>
+								- Contrôle de la position du bras<br/>
+								<span class="fontS">Programmé en C++</span>
 							</span>
 						</div>
 					</div>
+
+					<iframe src="https://www.youtube-nocookie.com/embed/nkJfJjksbng" style="width:50vmax;height:28.125vmax;" loading="lazy" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 				</div>
 			</div>
 		</div>
 		
 		<!-- Vertical divider -->
-		<div class="grow flexHorizontal" style="height:6vmax;">
+		<div class="grow flexHorizontal" style="height:3vmax;">
+		</div>
+		
+		
+		<!-- Project (Game) -->
+		<div class="grow flexVertical">
+			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
+				<img src="imgGame_level.png" style="object-fit: contain; max-height: 10vmax; min-width:20vmax;"/>
+				<div style="width:5vmax;"></div>
+				<div class="flexVertical">
+					<div class="fontL">
+						<span class="lang us">2D platformer game:</span>
+						<span class="lang fr">Jeu de plateforme 2D:</span>
+					</div>
+					<div class="flexHorizontal fontM">
+						<span class="lang us">A 2D videogame about a jumping robot dodging lasers with a grappling hook!</span>
+						<span class="lang fr">Un jeu vidéo 2D avec un robot qui échape aux lasers avec son grappin!</span>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="grow colSub flexVertical flexCenter collapser fontM" style="padding:0.5vmax;">
+				<span class="lang us">Details</span>
+				<span class="lang fr">Détails</span>
+				<svg width="1vmax" height="1vmax" viewBox="4 4 16 16" fill="none">
+					<path d="M7 10L12 15L17 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+				</svg>
+			</div>
+			<div class="collapsible collapsed colSub flexHorizontal flexCenter" style="padding:1vmax; gap:1vmax;">
+				<div class="flexHorizontal flexCenter" style="gap:3vmax;">
+					<div>
+						<div class="fontL">
+							<span class="lang us">Main work:</span>
+							<span class="lang fr">Activitées principales:</span>
+						</div>
+						<div class="fontM">
+							<span class="lang us">
+								- <span>Collision detection<span class="tooltip">See the "2D physics engine section" for more</span></span><br/>
+								- <span>Shadows & shaders<span class="tooltip">Shadows are calculated and cast on a separate texture, added together, then displayed onto the final scene</span></span><br/>
+								- <span>Entity management<span class="tooltip">Entities can reference each other, and can be added or deleted at any time</span></span><br/>
+								- Level editor<br/>
+								<span class="fontS">Programmed in C++</span>
+							</span>
+							<span class="lang fr">
+								- <span>Collision detection<span class="tooltip">See the "2D physics engine section" for more</span></span><br/>
+								- <span>Shadows & shaders<span class="tooltip">Shadows are calculated and cast on a separate texture, added together, then displayed onto the final scene</span></span><br/>
+								- <span>Entity management<span class="tooltip">Entities can reference each other, and can be added or deleted at any time</span></span><br/>
+								- Level editor<br/>
+								<span class="fontS">Programé en C++</span>
+							</span>
+						</div>
+					</div>
+
+					<iframe src="https://www.youtube-nocookie.com/embed/Nc2yOlgUCGs" style="width:50vmax;height:28.125vmax;" loading="lazy" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Vertical divider -->
+		<div class="grow flexHorizontal" style="height:3vmax;">
 		</div>
 		
 		<!-- Project (2D image positioning algorithm) -->
 		<div class="grow flexVertical">
 			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
-				<img src="imgSimilarity_thumbnail.png" style="object-fit: contain; max-height: 10vmax;"/>
+				<img src="imgSimilarity_thumbnail.png" style="object-fit: contain; max-height: 10vmax; min-width:20vmax;"/>
 				<div style="width:5vmax;"></div>
 				<div class="flexVertical">
 					<div class="fontL">
@@ -362,7 +383,7 @@
 					</div>
 					<div class="flexHorizontal fontM">
 						<span class="lang us">An algorithm that positions images based on their similiarities!</span>
-						<span class="lang fr">---</span>
+						<span class="lang fr">Un algorithme qui positionne des images selon leurs similaritées!</span>
 					</div>
 				</div>
 			</div>
@@ -380,15 +401,24 @@
 					<div>
 						<div class="fontL">
 							<span class="lang us">Main work:</span>
-							<span class="lang fr">---:</span>
+							<span class="lang fr">Activitées principales:</span>
 						</div>
 						<div class="fontM">
 							<span class="lang us">
-								---
+								- Import of excel data describing each image<br/>
+								- Simulation of positions connected by springs<br/>
+								- GIF animation creation<br/>
+								- Output of image positions<br/>
+								- Multithreading for performance<br/>
 								<span class="fontS">Programmed in C++</span>
 							</span>
 							<span class="lang fr">
-								---
+								- Import de données excel décrivant chaque image<br/>
+								- Simulation de positions connectées par des ressorts<br/>
+								- Création d'animation GIF<br/>
+								- Export de la position des images<br/>
+								- Multithreading pour améliorer la performance<br/>
+								<span class="fontS">Programmé en C++</span>
 							</span>
 						</div>
 					</div>
@@ -399,50 +429,52 @@
 		</div>
 		
 		<!-- Vertical divider -->
-		<div class="grow flexHorizontal" style="height:6vmax;">
+		<div class="grow flexHorizontal" style="height:3vmax;">
 		</div>
 		
-		<!-- Project (Portfolio) -->
+		<!-- Mini-Project (Portfolio) -->
 		<div class="grow flexVertical">
 			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
-				<img src="imgPortfolio_thumbnail.png" style="object-fit: contain; max-height: 10vmax;"/>
+				<img src="imgLanguage_thumbnail.png" style="object-fit: contain; max-height: 10vmax; max-width: 20vmax; min-width:20vmax;"/>
 				<div style="width:5vmax;"></div>
 				<div class="flexVertical">
 					<div class="fontL">
-						<span class="lang us">This portfolio:</span>
-						<span class="lang fr">Ce portfolio:</span>
+						<span class="lang us">Programming language & IDE:</span>
+						<span class="lang fr">Langage de programmation & IDE:</span>
 					</div>
 					<div class="flexHorizontal fontM">
-						<span class="lang us">The portfolio you are reading right now!</span>
-						<span class="lang fr">---</span>
+						<span class="lang us">A brand new programming language, with an integrated visual IDE!</span>
+						<span class="lang fr">Un language de programmation completement nouveau, avec un IDE visuel integré!</span>
+					</div>
+					<div class="fontS">
+						<span class="lang us"><br/>(work in progress)</span>
+						<span class="lang fr"><br/>(en construction)</span>
 					</div>
 				</div>
 			</div>
-			
-			
-			<div class="grow colSub flexVertical flexCenter collapser fontM" style="padding:0.5vmax;">
-				<span class="lang us">Details</span>
-				<span class="lang fr">Détails</span>
-				<svg width="1vmax" height="1vmax" viewBox="4 4 16 16" fill="none">
-					<path d="M7 10L12 15L17 10" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-				</svg>
-			</div>
-			<div class="collapsible collapsed colSub flexHorizontal flexCenter" style="padding:1vmax; gap:1vmax;">
-				<div class="flexHorizontal flexCenter" style="gap:3vmax;">
-					<div>
-						<div class="fontL">
-							<span class="lang us">Main work:</span>
-							<span class="lang fr">---:</span>
-						</div>
-						<div class="fontM">
-							<span class="lang us">
-								---
-								<span class="fontS">Programmed in C++</span>
-							</span>
-							<span class="lang fr">
-								---
-							</span>
-						</div>
+		</div>
+		
+		<!-- Vertical divider -->
+		<div class="grow flexHorizontal" style="height:3vmax;">
+		</div>
+		
+		<!-- Mini-Project (Portfolio) -->
+		<div class="grow flexVertical">
+			<div class="grow flexHorizontal flexCenterOff colMain" style="padding:1vmax;">
+				<img src="imgStock_thumbnail.png" style="object-fit: contain; max-height: 10vmax; max-width: 20vmax; min-width:20vmax;"/>
+				<div style="width:5vmax;"></div>
+				<div class="flexVertical">
+					<div class="fontL">
+						<span class="lang us">Stock trade server & bot:</span>
+						<span class="lang fr">Serveur & robot de bourse:</span>
+					</div>
+					<div class="flexHorizontal fontM">
+						<span class="lang us">A server that gathered live stock trading data, with a display interface!</span>
+						<span class="lang fr">Un serveur de collecte de données de bourse en direct, avec une interface d'affichage!</span>
+					</div>
+					<div class="fontS">
+						<span class="lang us"><br/>(scrapped project)</span>
+						<span class="lang fr"><br/>(projet abandonné)</span>
 					</div>
 				</div>
 			</div>
