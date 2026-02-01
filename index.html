@@ -86,6 +86,27 @@
 		padding-top: 0 !important;
 		padding-bottom: 0 !important;
 	}
+
+	.zoomable
+	{
+		cursor: pointer;
+	}
+
+	.fullscreenImage
+	{
+		position: fixed;
+		z-index: 99;
+
+		left: 500;
+		top: 0;
+		width: 100vw;
+		height: 100vh;
+
+		max-height: 100vh !important;
+		max-width: 100vw !important;
+
+		object-fit: auto;
+	}
 </style>
 
 <html>
@@ -186,14 +207,14 @@
 							</div>
 						</div>
 
-						<img src="imgParser_example.png" style="object-fit: contain; max-height: 50vh; max-width: 80vh;"/>
+						<img src="imgParser_example.png" style="object-fit: contain; max-height: 50vh; max-width: 80vh;" class="zoomable"/>
 					</div>
 					
 					<div class="flexHorizontal flexCenter" style="gap:3vmax;">
-						<img src="imgParser_type.jpg" style="object-fit: contain; max-height: 20vmax;"/>
-						<img src="imgParser_namepack.jpg" style="object-fit: contain; max-height: 20vmax;"/>
-						<img src="imgParser_shard1.jpg" style="object-fit: contain; max-height: 20vmax;"/>
-						<img src="imgParser_shard2.jpg" style="object-fit: contain; max-height: 20vmax;"/>
+						<img src="imgParser_type.jpg" style="object-fit: contain; max-height: 20vmax;" class="zoomable"/>
+						<img src="imgParser_namepack.jpg" style="object-fit: contain; max-height: 20vmax;" class="zoomable"/>
+						<img src="imgParser_shard1.jpg" style="object-fit: contain; max-height: 20vmax;" class="zoomable"/>
+						<img src="imgParser_shard2.jpg" style="object-fit: contain; max-height: 20vmax;" class="zoomable"/>
 					</div>
 				</div>
 			</div>
@@ -259,9 +280,9 @@
 
 					
 					<div class="flexHorizontal flexCenter" style="gap:3vmax;">
-						<img src="imgPhysics_aabb.jpg" style="object-fit: contain; max-height: 20vmax;"/>
-						<img src="imgPhysics_booleanOperations.jpg" style="object-fit: contain; max-height: 20vmax;"/>
-						<img src="imgPhysics_jumpTrajectory.jpg" style="object-fit: contain; max-height: 20vmax;"/>
+						<img src="imgPhysics_aabb.jpg" style="object-fit: contain; max-height: 20vmax;" class="zoomable"/>
+						<img src="imgPhysics_booleanOperations.jpg" style="object-fit: contain; max-height: 20vmax;" class="zoomable"/>
+						<img src="imgPhysics_jumpTrajectory.jpg" style="object-fit: contain; max-height: 20vmax;" class="zoomable"/>
 					</div>
 				</div>
 			</div>
@@ -325,10 +346,10 @@
 						<iframe src="https://www.youtube-nocookie.com/embed/nkJfJjksbng" style="width:50vmax;height:28.125vmax;" loading="lazy" title="YouTube video player" frameborder="0" allow="web-share" referrerpolicy="strict-origin-when-cross-origin"></iframe>
 					</div>
 					<div class="flexHorizontal flexCenter" style="gap:3vmax;">
-						<img src="imgConnect4_interface1.jpg" style="object-fit: contain; max-height: 20vmax;"/>
-						<img src="imgConnect4_interface2.jpg" style="object-fit: contain; max-height: 20vmax;"/>
-						<img src="imgConnect4_interface3.jpg" style="object-fit: contain; max-height: 20vmax;"/>
-						<img src="imgConnect4_plans.jpg" style="object-fit: contain; max-height: 20vmax;"/>
+						<img src="imgConnect4_interface1.jpg" style="object-fit: contain; max-height: 20vmax;" class="zoomable"/>
+						<img src="imgConnect4_interface2.jpg" style="object-fit: contain; max-height: 20vmax;" class="zoomable"/>
+						<img src="imgConnect4_interface3.jpg" style="object-fit: contain; max-height: 20vmax;" class="zoomable"/>
+						<img src="imgConnect4_plans.jpg" style="object-fit: contain; max-height: 20vmax;" class="zoomable"/>
 					</div>
 				</div>
 			</div>
@@ -394,8 +415,8 @@
 					</div>
 					
 					<div class="flexHorizontal flexCenter" style="gap:3vmax;">
-						<img src="imgGame_lightingNotes.jpg" style="object-fit: contain; max-height: 20vmax;"/>
-						<img src="imgGame_observer.jpg" style="object-fit: contain; max-height: 20vmax;"/>
+						<img src="imgGame_lightingNotes.jpg" style="object-fit: contain; max-height: 20vmax;" class="zoomable"/>
+						<img src="imgGame_observer.jpg" style="object-fit: contain; max-height: 20vmax;" class="zoomable"/>
 					</div>
 				</div>
 			</div>
@@ -552,6 +573,10 @@
 		this.classList.toggle("active");
 		content.classList.toggle("collapsed");
 	}
+	function toggleFullscreen()
+	{
+		this.classList.toggle("fullscreenImage");
+	}
 	
 	function init()
 	{
@@ -563,6 +588,10 @@
 		// Collapsers
 		var collapsers = document.getElementsByClassName("collapser");
 		for (i = 0; i < collapsers.length; i += 1) { collapsers[i].nextElementSibling.style.maxHeight = "100vh"; collapsers[i].addEventListener("click", toggleCollapse); }
+
+		// Images
+		var zoomables = document.getElementsByClassName("zoomable");
+		for (i = 0; i < zoomables.length; i += 1) { zoomables[i].addEventListener("click", toggleFullscreen); }
 
 		// Links
 		var links = document.getElementsByTagName("a");
